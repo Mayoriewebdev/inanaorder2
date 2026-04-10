@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inana Food Company</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <section class="order-section" data-aos="fade-up">
+
+    <div class="order-container">
+
+        <!-- Logo -->
+        <div class="logo" data-aos="fade-right" data-aos-delay="100">
+            <a href="javascript:void(0)">
+                <img src="images/logo.png" alt="Inana Food">
+            </a>
+        </div>
+
+        <!-- Steps -->
+        <div class="steps" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="step">1</div>
+
+            <div class="step-line"></div>
+
+            <div class="step active">2</div>
+
+            <div class="step-line"></div>
+
+            <div class="step">3</div>
+
+        </div>
+
+        <!-- Title -->
+        <div class="title-box" data-aos="fade-up" data-aos-delay="300">
+
+            <a href="javascript:void(0)">
+                <img src="images/Choose.png" class="title-img">
+            </a>
+
+            <a href="javascript:void(0)">
+                <img src="images/Min carton.png" class="subtitle-img">
+            </a>
+
+        </div>
+
+        <!-- Products -->
+        <div class="product-grid" data-aos="zoom-in" data-aos-delay="400">
+
+            <div class="product-card">
+                <img src="images/5g.png" class="product-img">
+            </div>
+
+            <div class="product-card active">
+                <img src="images/30g.png" class="product-img">
+            </div>
+
+            <div class="product-card">
+                <img src="images/100g.png" class="product-img">
+            </div>
+
+            <div class="product-card">
+                <img src="images/300g.png" class="product-img">
+            </div>
+
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-section"
+             data-aos="fade-up"
+             data-aos-delay="500"
+             data-aos-duration="600"
+             data-aos-once="true">
+
+            <div class="total-price">
+                <a href="javascript:void(0)">
+                    <img src="images/total text.png" class="total-img">
+                </a>
+            </div>
+
+            <a href="javascript:void(0)" class="proceed-btn">
+                <img src="images/proceed.png" class="btn-img">
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
+
+    <script>
+
+        const cards = document.querySelectorAll(".product-card");
+
+        cards.forEach(card => {
+            card.addEventListener("click", () => {
+
+                cards.forEach(c => {
+                    c.classList.remove("active");
+                });
+
+                card.classList.add("active");
+
+            });
+        });
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
