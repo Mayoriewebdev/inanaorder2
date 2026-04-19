@@ -34,7 +34,7 @@ body {
 /* Logo */
 
 .logo img {
-  width: 140px;
+  width: 110px;
   margin-bottom: 30px;
 }
 
@@ -94,8 +94,16 @@ body {
 
 /* Card */
 
-/* .product-card {
-  
+
+
+
+
+
+/* Make anchor behave like card */
+.product-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   border-radius: 14px;
   padding: 30px 20px;
   border: 2px solid #e5e5e5;
@@ -103,22 +111,72 @@ body {
   position: relative;
   transition: 0.3s;
   cursor: pointer;
+  overflow: visible;
 }
 
+/* Main product image */
+.product-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Top overlay image (badge) */
+.product-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 120px; /* adjust size */
+  height: auto;
+  z-index: 2;
+}
+
+/* Active state */
 .product-card.active {
   border-color: #5a0a66;
 }
 
+/* Hover effect */
 .product-card:hover {
   transform: translateY(-4px);
-} */
+}
+
+
+
+
+/* Red top-right badge */
+.carton-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  top: -15px;     /* move up outside */
+  right: -15px;   /* move right outside */
+
+  background: #ff1a1a;
+  color: #fff;
+  padding: 14px 22px;
+  font-size: 12px;
+  font-weight: 600;
+  /* border-bottom-left-radius: 40px; */
+  /* border-top-right-radius: 14px; */
+  z-index: 3;
+}
+
+/* Optional: make it more rounded like your image */
+.carton-badge {
+  border-radius: 20px;
+}
+
+
+
+
 
 /* Badge */
 
-.total-price h2 {
+/* .total-price h2 {
   color: #5a0a66;
   font-size: 34px;
-}
+} */
 
 /* Button */
 
@@ -171,6 +229,7 @@ display:block;
 
 
 
+
 /* proceed button */
 .bottom-section {
   display: flex;
@@ -179,8 +238,6 @@ display:block;
   gap: 15px;
   flex-wrap: nowrap; /* keeps them side by side */
 }
-
-
 
 @media (max-width:600px) {
 
@@ -200,7 +257,6 @@ display:block;
     width: 160px;
   }
 }
-
 
 
 .proceed-btn {
